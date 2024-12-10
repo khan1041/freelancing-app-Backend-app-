@@ -11,7 +11,7 @@ import { v2 as cloudinary } from "cloudinary";
 //import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv'
 import cors from 'cors'
-import { errorMiddleware } from './midelware/errorhandel.js';
+//import { errorMiddleware } from './midelware/errorhandel.js';
 const app = express()
 
 
@@ -47,19 +47,18 @@ app.use(fileUpload({
  dotenv.config()
 
  app.use("/app/auth",router)
- app.use("/app/blog",Blog)
- app.use("/app/public",publicroutes)
 
 
 
- cloudinary.config({ 
-  cloud_name:process.env.CLOUD_NAME, 
-  api_key:process.env. CLOUD_API_KEY, 
-  api_secret:process.env.API_SECRET_KEY  // Click 'View API Keys' above to copy your API secret
-});
+
+//  cloudinary.config({ 
+//   cloud_name:process.env.CLOUD_NAME, 
+//   api_key:process.env. CLOUD_API_KEY, 
+//   api_secret:process.env.API_SECRET_KEY  // Click 'View API Keys' above to copy your API secret
+// });
 
  
-app.use(errorMiddleware)
+// app.use(errorMiddleware)
 
 conectedDb().then(()=>{
   app.listen(port,()=>{

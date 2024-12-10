@@ -33,7 +33,7 @@ app.use(
 
 app.use(express.static('public'))
 import fileUpload from 'express-fileupload'
-import publicroutes from './routes/Publilcroutes.js';
+//import publicroutes from './routes/Publilcroutes.js';
 
 const port=8000
 
